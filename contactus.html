@@ -9,9 +9,14 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Contact Us - Official SLC Legends</title>
+    <!-- JavaScript link -->
+    <script src="/js/scripts.js"></script>
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Map Settings -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM0h_HSJPqLZmGDPaOwc-cHH5hvRgUoI0&callback=initMap&libraries=maps,marker&v=beta"
@@ -29,33 +34,69 @@
     <!-- Responsive navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-      <!-- Add logo with size of 60*60 -->
-      <a class="navbar-brand" href="/index.html"><img src= "img/volleyball_team_logo_oficial.png"
-          width="60" height="60" alt=""></a>
-          <a class="navbar-brand" href="/index.html">SLC Legends</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/aboutus.html">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/events.html">Calendar</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/donation.html">Donate</a></li>
-                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="/contactus.html">Contact</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/faq.html">FAQ</a></li>
-              </ul>
-          </div>
+        <!-- Add logo with size of 60*60 -->
+        <a class="navbar-brand" href="/index.html"
+          ><img
+            src="img/volleyball_team_logo_oficial.png"
+            width="60"
+            height="60"
+            alt=""
+        /></a>
+        <a class="navbar-brand" href="/index.html">SLC Legends</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/aboutus.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/events.html">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/donation.html">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/contactus.html"
+                >Contact</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faq.html">FAQ</a>
+            </li>
+          </ul>
+        </div>
       </div>
-  </nav>
+    </nav>
 
+    <!-- Contact Us Form -->
     <div class="container-fluid px-5 my-5">
       <div class="row justify-content-center">
         <div class="col-xl-10">
           <div class="card border-0 rounded-3 shadow-lg overflow-hidden">
             <div class="card-body p-0">
               <div class="row g-0">
-                <div class="col-sm-6 d-none d-sm-block bg-image"></div>
+                <div
+                  id="backgroundImage"
+                  class="col-sm-6 d-none d-sm-block bg-slider"
+                  style="
+                    background-image: url('/img/chandan-chaurasia-tAcoHIvCtwM-unsplash.jpg');"
+                ></div>
                 <div class="col-sm-6 p-4">
                   <div class="text-center">
                     <div class="h3 fw-light">Contact Us</div>
@@ -178,7 +219,7 @@
                 <h4 class="text-uppercase m-0">Address</h4>
                 <hr class="my-4 mx-auto" />
                 <div class="small text-black">
-                    600 Harvey Milk Blvd, Salt Lake City, UT
+                  600 Harvey Milk Blvd, Salt Lake City, UT
                 </div>
               </div>
             </div>
@@ -211,97 +252,117 @@
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- GOOGLE MAPS -->
+    <br /><br />
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        // Coordinates of the desired location
+        var location = { lat: 40.74724234471358, lng: -111.87211484807754 };
 
-      <!-- GOOGLE MAPS -->
-      <br><br>
-      <div id="map"></div>
-      <script>
-        function initMap() {
-          // Coordinates of the desired location
-          var location = { lat: 40.74724234471358, lng: -111.87211484807754 };
-      
-          // Create a map centered at the specified location
-          var map = new google.maps.Map(document.getElementById("map"), {
-            center: location,
-            zoom: 16,
-          });
-      
-          // Add a marker at the specified location
-          var marker = new google.maps.Marker({
-            position: location,
-            map: map,
-          });
-      
-          // Add click event listener to the marker
-          marker.addListener("click", function () {
-            // Open the directions link in a new tab/window
-            window.open("https://www.google.com/maps/dir/?api=1&destination=" + location.lat + "," + location.lng);
-          });
-        }
-      </script>
-      <section class="py-5">
-        <div class="container my-5">
-          <div class="row justify-content-center">
-            <div class="col-lg-6">
-              <h2>Come Practice With Us</h2>
-              <p class="lead">
-                Location: Liberty Park
-              </p>
-              <p class="lead">
-                Time: Saturdays, 9:00 AM
-              </p>
-              <p class="mb-0">
-                Practice with us for free and meet our top players!
-              </p>
-            </div>
+        // Create a map centered at the specified location
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: location,
+          zoom: 16,
+        });
+
+        // Add a marker at the specified location
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map,
+        });
+
+        // Add click event listener to the marker
+        marker.addListener("click", function () {
+          // Open the directions link in a new tab/window
+          window.open(
+            "https://www.google.com/maps/dir/?api=1&destination=" +
+              location.lat +
+              "," +
+              location.lng
+          );
+        });
+      }
+    </script>
+    <section class="py-5">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h2>Come Practice With Us</h2>
+            <p class="lead">Location: Liberty Park</p>
+            <p class="lead">Time: Saturdays, 9:00 AM</p>
+            <p class="mb-0">
+              Practice with us for free and meet our top players!
+            </p>
           </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="../project2/js/script.js"></script>
-  
-        <!-- CDN Link to SB Forms Scripts -->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-      </section>
+      </div>
+      <!-- Bootstrap core JS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Core theme JS-->
+      <script src="../project2/js/script.js"></script>
 
+      <!-- CDN Link to SB Forms Scripts -->
+      <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </section>
 
     <!-- Image element - set the background image for the header in the line below-->
     <div
       class="py-5 bg-image-full"
-      style="
-        background-image: url('/img/volley-sunset.png');
-      "
+      style="background-image: url('/img/volley-sunset.png')"
     >
       <!-- Put anything you want here! The spacer below with inline CSS is just for demo purposes!-->
       <div style="height: 20rem"></div>
-    </div> <br><br>
+    </div>
+    <br /><br />
     <!-- Content section-->
 
-
-
-        <!-- Footer-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-        <footer class="py-5 bg-dark">
-            <div class="container">
-                <p class="m-0 text-center text-white">
-                    Follow us on social media: <br><br>
-                    <a href="https://www.instagram.com/" target="_blank" class="text-white mx-2" style="text-decoration: none;">
-                        <i class="fab fa-instagram fa-2xl"></i>
-                    </a>
-                    <a href="https://www.facebook.com/" target="_blank" class="text-white mx-2" style="text-decoration: none;">
-                        <i class="fab fa-facebook fa-2xl"></i>
-                    </a>
-                </p><br>
-                <p class="m-0 text-center text-white">Copyright &copy; SLC Legends 2023 | All images are free of copyrights</p>
-                <p class="m-0 text-center text-white">Creators: Augusto Freire & Vida Lima</p><br>
-                <a class="d-flex justify-content-center align-items-center" href="/contactus.html">Contact Us</a>
-            </div>
-        </footer>
+    <!-- Footer-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+    />
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">
+          Follow us on social media: <br /><br />
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="text-white mx-2"
+            style="text-decoration: none"
+          >
+            <i class="fab fa-instagram fa-2xl"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="text-white mx-2"
+            style="text-decoration: none"
+          >
+            <i class="fab fa-facebook fa-2xl"></i>
+          </a>
+        </p>
+        <br />
+        <p class="m-0 text-center text-white">
+          Copyright &copy; SLC Legends 2023 | All images are free of copyrights
+        </p>
+        <p class="m-0 text-center text-white">
+          Creators: Augusto Freire & Vida Lima
+        </p>
+        <br />
+        <a
+          class="d-flex justify-content-center align-items-center"
+          href="/contactus.html"
+          >Contact Us</a
+        ><br />
+        <p class="m-0 text-center text-white footer-timestamp"></p>
+      </div>
+    </footer>
 
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
   </body>
 </html>

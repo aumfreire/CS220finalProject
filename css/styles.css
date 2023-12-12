@@ -12616,6 +12616,22 @@ fieldset:disabled .btn {
   background-size: cover;
 }
 
+/* .bg-image {
+  background-image: url('/IMG/contact/c1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}  */
+
+.bg-slider {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease-in-out; /* Change transition property to opacity */
+}
+
+
+
 .contact-section {
   padding-top: 5rem;
   /* background-image: url(/img/contact-background.png); */
@@ -12654,3 +12670,4 @@ fieldset:disabled .btn {
   line-height: 3rem;
   color: rgba(231, 13, 13, 0.3);
 }
+
