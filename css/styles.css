@@ -12654,3 +12654,55 @@ fieldset:disabled .btn {
   line-height: 3rem;
   color: rgba(231, 13, 13, 0.3);
 }
+/* About Page CSS */
+.player-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+.player-container {
+  display: inline-block; /* Use inline-block to make containers appear next to each other */
+  background-color: white;
+  margin: 30px; /* Adjust margin for spacing between pairs of containers */
+}
+
+/* Caledar Page */
+ .calendar {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td {
+  cursor: pointer;
+}
+.calendar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  margin: 0;
+} 
+iframe {
+  border-width: 6;
+  width: 800px; /* Adjust the width as needed */
+  height: 600px; /* Adjust the height as needed */
+}
